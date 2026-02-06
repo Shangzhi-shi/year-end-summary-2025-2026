@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://lucide.dev/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>年终总结 | 师宇翔</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Reveal.js CSS -->
+    <link rel="stylesheet" href="https://esm.sh/reveal.js@5.1.0/dist/reveal.css" />
+    <link rel="stylesheet" href="https://esm.sh/reveal.js@5.1.0/dist/theme/white.css" id="theme" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#2563eb',
+              secondary: '#475569',
+              background: '#f8fafc',
+              surface: '#ffffff',
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+            },
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'zoom-in': 'zoomIn 0.3s ease-out forwards',
+            },
+            keyframes: {
+              zoomIn: {
+                '0%': { opacity: '0', transform: 'scale(0.9)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Override Reveal.js fonts to match Tailwind */
+      .reveal {
+        font-family: 'Inter', system-ui, sans-serif !important;
+        color: #1e293b !important;
+        font-size: 18px; /* Global Typography Scale Up */
+      }
+
+      /* Tighter line height for scaled text to prevent overflow */
+      .reveal p, .reveal li {
+        line-height: 1.35;
+      }
+      
+      /* Ensure full height for app */
+      body, html, #root {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      /* Tech Dot Pattern Background */
+      body {
+        background-color: #f8fafc;
+        background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+        background-size: 24px 24px;
+      }
+
+      /* Custom Reveal Overrides */
+      .reveal .slides section {
+        height: 100%;
+        padding: 20px;
+        /* Removed global text-align: left to allow centering */
+      }
+      
+      .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+        text-transform: none;
+        font-family: inherit;
+      }
+
+      .reveal .progress {
+        color: #2563eb;
+      }
+      
+      /* Hide scrollbars */
+      .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/client": "https://esm.sh/react-dom@^19.2.4/client",
+    "reveal.js": "https://esm.sh/reveal.js@5.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
